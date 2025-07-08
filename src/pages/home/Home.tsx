@@ -18,10 +18,10 @@ function Home() {
                             Servimos com tecnologia a quem dedica a vida ao bem-estar do outro.
                         </h1>
                         <div className="flex justify-center space-x-4">
-                            <button className="w-42 py-3 bg-[#8B5CF6] text-white font-semibold rounded-lg shadow-md hover:bg-[#7C3AED] transition duration-300">
+                            <button className="w-42 py-3 bg-[#8B5CF6] text-white font-semibold rounded-lg shadow-md hover:bg-[#7C3AED] transition duration-300 cursor-pointer">
                                 Login
                             </button>
-                            <button className="w-42 py-3 bg-[#34D399] text-white font-semibold rounded-lg shadow-md hover:bg-[#10B981] transition duration-300">
+                            <button className="w-42 py-3 bg-[#34D399] text-white font-semibold rounded-lg shadow-md hover:bg-[#10B981] transition duration-300 cursor-pointer">
                                 Cadastro
                             </button>
                         </div>
