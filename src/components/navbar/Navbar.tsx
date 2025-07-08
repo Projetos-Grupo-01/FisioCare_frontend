@@ -7,10 +7,10 @@ function Navbar() {
                 <img className="w-[200px]" src="./LogoFisioCare.png" alt="logo fisiocare" />
 
                 <a href="#" className=" ml-auto text-[#BCCDB2] hover:text-white py-4 px-3">
-                            Sobre o projeto
+                            Sobre o Projeto
                         </a>
                         <a href="#" className="text-[#BCCDB2] hover:text-white py-4 px-3">
-                            Sobre a equipe
+                            Quem Somos
                         </a>
                         <a href="#" className="text-[#BCCDB2] hover:text-white py-4 px-3">
                             <SignOut size={32} /> 
