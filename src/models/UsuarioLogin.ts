@@ -4,7 +4,7 @@ export default interface UsuarioLogin {
   usuario: string;
   senha: string;
   foto: string;
-  altura: number;
-  peso: number;
+  altura?: number;
+  peso?: number;
   token: string;
 }

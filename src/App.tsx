@@ -1,17 +1,35 @@
-import Footer from "./components/footer/Footer"
-import Navbar from "./components/navbar/Navbar"
-import Home from "./pages/home/Home"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cadastro from "./assets/pages/cadastro/Cadastro";
+import Home from "./assets/pages/home/Home";
+import Login from "./assets/pages/login/Login";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+
+import { AuthProvider } from "./contexts/AuthContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Home/>
-    <Footer/>
-
+      <AuthProvider>
+        <ToastContainer />
+        <BrowserRouter>
+          <Navbar />
+          <div className="min-h[80vh]">
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
