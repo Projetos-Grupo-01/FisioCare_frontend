@@ -8,5 +8,6 @@ export default interface Usuario {
   foto: string;
   altura?: number;
   peso?: number;
+  imc?: number;
   exercicio?: Exercicio[] | null;
 }
