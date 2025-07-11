@@ -1,6 +1,6 @@
 import type Exercicio from "./Exercicio";
 
-export default interface Tema {
+export default interface Categoria {
   id: number | undefined;
   nome: string;
   descricao: string;
