@@ -1,4 +1,4 @@
-import { SignOut } from "@phosphor-icons/react"
+import { Link, SignOut } from "@phosphor-icons/react"
 
 function Navbar() {
     return (
@@ -15,6 +15,7 @@ function Navbar() {
                         <a href="#" className="text-[#BCCDB2] hover:text-white py-4 px-3">
                             <SignOut size={32} /> 
                         </a>
+                        <Link to='/cadastrarcategoria' className='hover:underline'>Categoria</Link>
                 </div>
 <div>
                         

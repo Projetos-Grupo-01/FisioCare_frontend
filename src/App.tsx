@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import FormCategoria from "./components/categoria/formcategoria/FormCategoria";
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/cadastrartema" element={<FormCategoria />} />
+              <Route path="/editartema/:id" element={<FormCategoria />} />
             </Routes>
           </div>
           <Footer />
