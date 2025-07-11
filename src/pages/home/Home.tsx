@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import ListarExercicios from "../../components/exercicios/listarexercicios/ListarExercicios"
 import { AuthContext } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -16,6 +17,14 @@ function Home() {
               Seja bem vindo <br />
               {usuario.nome}!
             </h2>
+            <div className="flex justify-center space-x-4">
+              <Link to="/cadastrarcategoria" className="flex justify-center w-42 py-3 bg-[#904C77] text-white font-semibold rounded-lg shadow-md hover:bg-[#5B364E] transition duration-300 cursor-pointer">
+                Criar Categoria
+              </Link>
+              <Link to="/cadastrarexercicio" className="flex justify-center w-42 py-3 bg-[#C9D5B5] text-black hover:bg-white font-semibold rounded-lg shadow-md transition duration-300 cursor-pointer">
+                Criar Exercício
+              </Link>
+            </div>
           </div>
 
           <div className="flex justify-center">
