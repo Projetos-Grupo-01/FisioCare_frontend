@@ -3,10 +3,9 @@ import "./Cadastro.css";
 import { useNavigate } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import "react-toastify/dist/ReactToastify.css";
-import type Usuario from "../../../models/Usuario";
-import { cadastrarUsuario } from "../../../service/Service";
-import { ToastAlerta } from "../../../utils/ToastAlerta";
-
+import type Usuario from "../../models/Usuario";
+import { cadastrarUsuario } from "../../service/Service";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -15,7 +14,7 @@ function Cadastro() {
   const [confirmaSenha, setConfirmaSenha] = useState<string>("");
 
   const [usuario, setUsuario] = useState<Usuario>({
-    id: 0,
+    id: undefined,
     nome: "",
     usuario: "",
     senha: "",
@@ -25,7 +24,7 @@ function Cadastro() {
   });
 
   useEffect(() => {
-    if (usuario.id !== 0) {
+    if (usuario.id !== undefined) {
       retornar();
     }
   }, [usuario.id]);
@@ -200,7 +199,7 @@ function Cadastro() {
             </div>
 
             {/* Botões de ação */}
-            <div className="flex gap-4 w-full mt-2">
+            <div className="flex justify-center w-full mt-2">
               <button
                 type="submit"
                 className="bg-[#924D75] hover:bg-[#7b3e61] text-white py-2 px-4 rounded-lg w-1/2 flex justify-center items-center transition"
@@ -218,13 +217,6 @@ function Cadastro() {
                 )}
               </button>
 
-              <button
-                type="button"
-                onClick={retornar}
-                className="bg-red-400 hover:bg-red-500 text-white py-2 px-4 rounded-lg w-1/2 transition"
-              >
-                Cancelar
-              </button>
             </div>
 
             {/* Link para login */}

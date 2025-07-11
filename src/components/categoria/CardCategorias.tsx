@@ -1,6 +1,6 @@
-import { Link } from "@phosphor-icons/react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import type Categoria from "../../models/Categoria";
+import { Link } from "react-router-dom";
 
 
 interface CardCategoriasProps{
@@ -15,7 +15,7 @@ function CardCategorias({ categoria }: CardCategoriasProps) {
         Categoria
       </header>
 
-      <div className="bg-white p-4 rounded-b-lg text-center">
+      <div className="bg-white p-4 rounded-b-lg text-center h-full">
         <p className="text-[#1a2238] mb-4">{categoria.descricao}</p>
 
         <div className="flex justify-center gap-4">
