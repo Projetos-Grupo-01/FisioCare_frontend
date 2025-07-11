@@ -1,4 +1,4 @@
-function Home() {
+function LandingPage() {
     return (
         <>
             <div className="bg-[#1A1A2E] min-h-screen flex items-center justify-center py-16">
@@ -32,4 +32,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default LandingPage;
