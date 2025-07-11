@@ -3,10 +3,9 @@ import "./Cadastro.css";
 import { useNavigate } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import "react-toastify/dist/ReactToastify.css";
-import type Usuario from "../../../models/Usuario";
-import { cadastrarUsuario } from "../../../service/Service";
-import { ToastAlerta } from "../../../utils/ToastAlerta";
-
+import type Usuario from "../../models/Usuario";
+import { cadastrarUsuario } from "../../service/Service";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Cadastro() {
   const navigate = useNavigate();

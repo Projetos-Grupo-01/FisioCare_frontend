@@ -8,10 +8,10 @@ import {
   type ChangeEvent,
   type FormEvent,
 } from "react";
-import { AuthContext } from "../../../contexts/AuthContext";
 
 import { RotatingLines } from "react-loader-spinner";
-import type UsuarioLogin from "../../../models/UsuarioLogin";
+import type UsuarioLogin from "../../models/UsuarioLogin";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Login() {
   const navigate = useNavigate();
