@@ -241,7 +241,7 @@ function FormExercicio() {
 
             {categorias.map((categoria) => (
               <>
-                <option value={categoria.id}>{categoria.descricao}</option>
+                <option value={categoria.id}>{categoria.nome}</option>
               </>
             ))}
 

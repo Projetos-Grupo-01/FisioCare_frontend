@@ -79,7 +79,7 @@ function FormCategoria() {
             }
         } else {
             try {
-                await cadastrar(`/temas`, categoria, setCategoria, {
+                await cadastrar(`/categorias`, categoria, setCategoria, {
                     headers: { 'Authorization': token }
                 })
                 ToastAlerta('A categoria foi cadastrada com sucesso!', 'sucesso')

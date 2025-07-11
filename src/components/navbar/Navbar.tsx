@@ -1,11 +1,25 @@
 import { SignInIcon, SignOutIcon } from "@phosphor-icons/react"
-import { Link } from "react-router-dom"
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthContext";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Navbar() {
+
+  const navigate = useNavigate()
+
+  const { usuario, handleLogout } = useContext(AuthContext);
+
+  function logout() {
+    handleLogout()
+    ToastAlerta('O Usuário foi desconectado com sucesso', 'sucesso')
+    navigate('/')
+  }
+
   return (
     <>
-      <div className='w-full flex px-19 py-4 bg-[#001427] text-white'>
-        <Link to="/">
+      <div className='w-full flex px-19 py-4 bg-[#001427] text-white text-lg'>
+        <Link to={usuario.id === 0 ? "/" : "/home"}>
           <img className="w-52" src="./LogoFisioCare.png" alt="logo fisiocare" />
         </Link>
 
@@ -15,10 +29,25 @@ function Navbar() {
         <Link to="/quemsomos" className="text-[#BCCDB2] hover:text-white py-4 px-3">
           Quem Somos
         </Link>
-        <Link to="login" className="text-[#BCCDB2] hover:text-white py-4 px-3">
-          <SignInIcon size={32} />
+
+        {usuario.id !== 0 && (
+
+          <><Link to="/categorias" className=" text-[#BCCDB2] hover:text-white py-4 px-3">
+            Categorias
+          </Link><Link to="/exercicios" className="text-[#BCCDB2] hover:text-white py-4 px-3">
+              Exercicios
+            </Link></>
+        )}
+
+        <Link to="/perfil" className="text-[#BCCDB2] hover:text-white py-4 px-3">
+          <img src={usuario.foto} alt={usuario.nome} className="rounded-full w-7" />
         </Link>
-        <Link to='/categorias' className='hover:underline'>Categoria</Link>
+
+        <Link to="" onClick={logout} className="text-[#BCCDB2] hover:text-white py-4 px-3 flex items-center">
+          {usuario.id === 0 ?
+            <SignInIcon size={32} />
+            : <SignOutIcon size={32} />}
+        </Link>
       </div>
     </>
   )
