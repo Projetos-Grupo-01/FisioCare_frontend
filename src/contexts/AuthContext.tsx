@@ -14,6 +14,8 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext({} as AuthContextProps);
 
 export function AuthProvider({ children }: AuthProviderProps) {
@@ -34,7 +36,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoading(true);
 
     try {
-      await login("/usuarios/logar", usuarioLogin, setUsuario);
+      await login(`/usuarios/logar`, usuarioLogin, setUsuario);
       ToastAlerta("O Usuário foi autenticado com sucesso!", "sucesso");
     } catch (error) {
       ToastAlerta("O dados do Usuário estão incorretos", "erro");
