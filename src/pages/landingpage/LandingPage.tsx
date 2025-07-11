@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function LandingPage() {
     return (
         <>
@@ -18,12 +20,12 @@ function LandingPage() {
                             Servimos com tecnologia a quem dedica a vida ao bem-estar do outro.
                         </h1>
                         <div className="flex justify-center space-x-4">
-                            <button className="w-42 py-3 bg-[#8B5CF6] text-white font-semibold rounded-lg shadow-md hover:bg-[#7C3AED] transition duration-300 cursor-pointer">
+                            <Link to="/login" className="flex justify-center w-42 py-3 bg-[#904C77] text-white font-semibold rounded-lg shadow-md hover:bg-[#5B364E] transition duration-300 cursor-pointer">
                                 Login
-                            </button>
-                            <button className="w-42 py-3 bg-[#34D399] text-white font-semibold rounded-lg shadow-md hover:bg-[#10B981] transition duration-300 cursor-pointer">
+                            </Link>
+                            <Link to="/cadastro" className="flex justify-center w-42 py-3 bg-[#C9D5B5] text-black hover:bg-white font-semibold rounded-lg shadow-md transition duration-300 cursor-pointer">
                                 Cadastro
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

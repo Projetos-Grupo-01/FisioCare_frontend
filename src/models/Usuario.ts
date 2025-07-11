@@ -1,7 +1,7 @@
 import type Exercicio from "./Exercicio";
 
 export default interface Usuario {
-  id: number;
+  id: number | undefined;
   nome: string;
   usuario: string;
   senha: string;

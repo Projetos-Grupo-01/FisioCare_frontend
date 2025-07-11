@@ -1,6 +1,6 @@
-import { Link } from "@phosphor-icons/react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import type Categoria from "../../models/Categoria";
+import { Link } from "react-router-dom";
 
 
 interface CardCategoriasProps{
