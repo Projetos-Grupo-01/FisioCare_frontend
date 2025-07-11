@@ -1,4 +1,4 @@
-
+import QuemSomos from "./pages/home/sobre/QuemSomos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cadastro from "./assets/pages/cadastro/Cadastro";
 import Home from "./assets/pages/home/Home";
@@ -9,7 +9,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Sobre from "./pages/sobre/Sobre"
-
 
 function App() {
   return (
@@ -23,6 +22,8 @@ function App() {
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
+              <Route path="/quemsomos" element={<QuemSomos />} />
+              
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
             </Routes>
